@@ -1,0 +1,32 @@
+a {
+  margin : 0;
+  padding : 0;
+}
+
+body {
+		/*background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/38/Flower_July_2011-2_1_cropped.jpg')*/
+    /* 백그라운드로 사용할 이미지를 지정. */
+		background :   url('https://pixabay.com/get/gc4dc4de380105f931435633c960fd5b5f4841c07b63dbe525e4e41113e3f027b489d5b9fd2b7bfcfc5fc667f83fc8eb485a0b8450a4bd678bee33c4a0f00e8525c2cdd48da4cbf46dcfad330989dad68_1920.jpg') no-repeat;
+    /* 배경지역이 배경 이미지로 완전히 덮이도록 설정. */
+     background-size : cover;
+    /* 백그라운드를 정 가운데로 설정 */
+    background-position: center center;
+    width : 100vw;
+    height : 100vh;
+}
+
+#btn {
+  width : 100%;
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  transform : translate(-50%, -50%);
+}
+	
+#btn_start {
+	margin: auto;
+	display: block;
+  text-align : center;
+	background-color: white;
+}
+
