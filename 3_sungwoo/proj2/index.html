@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	
+  <meta charset="UTF-8" name="viewport" 
+		content="width=device-width, initial-scale=1.0">
+  <!-- △ 너비는 장치의 너비로 설정 / 초기 화면 배율 설정 -->
+  <title>WorkMate</title>
+	<link href="css/main.css" rel="stylesheet">
+	
+</head>
+<body>
+	
+  <div id="main">
+		<canvas id="myCanvas" width="600" height="300">
+		</canvas>
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+
+			// arc 함수
+			// arc(x, y, radius, startAngle, endAngle);
+			ctx.beginPath();
+			ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.arc(150, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(250, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+			
+			ctx.beginPath();
+			ctx.arc(150, 150, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(250, 150, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+		</script>
+		<div id="logo">
+      
+    </div>
+  
+  </div>
+	
+</body>
+</html>
