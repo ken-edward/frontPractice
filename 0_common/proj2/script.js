@@ -74,6 +74,10 @@ function gameLoop(){
   if (left){
     x = x - 10
   }
+	if (x < 0) x = 0;
+	if (x > window.innerWidth) x = window.innerWidth;
+  if (y < window.innerHeight/2) y = window.innerHeight/2;
+	if (y > window.innerHeight) y = window.innerHeight;
   div.style.left = x+'px'
   div.style.top = y+'px'
 	checkAnswer();
