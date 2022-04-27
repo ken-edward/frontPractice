@@ -1,0 +1,22 @@
+* { padding: 0; margin: 0;}
+
+canvas
+{
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+
+html, body
+{
+	margin: 0;
+  width:  100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#ox_canvas
+{
+  position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+}
