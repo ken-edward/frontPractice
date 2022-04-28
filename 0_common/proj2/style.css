@@ -1,5 +1,6 @@
 html, body {
 	margin: 0;
+	width: 100%;
 	height: 100%;
 	overflow: hidden;
 }
@@ -78,4 +79,19 @@ html, body {
   transform: translate(-50%, -50%);
 	color: white;
 	font-weight: bold;
+}
+
+#indexInner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+}
+
+#inner {
+	
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -1,13 +1,39 @@
 <!doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="style.css"
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div class="center">
-			<a href="matching.html">
-				start
-			</a>
+		<script>
+			var play = false;
+			var audio = new Audio("/lib/audio/sample.wav");
+			
+			function onOff() {
+				play = !play;
+				
+				if (play) {
+					audio.play();
+					document.getElementById("btn_bgm").src = "/lib/image/headon.png";
+				} else {
+					audio.pause();
+					document.getElementById("btn_bgm").src = "/lib/image/headoff.png";
+				}
+			}
+		</script>
+		<div>
+         <input id="btn_bgm" type="image" onclick="onOff()" src="/lib/image/headoff.png">
+				 </input>
+     </div>
+		<div class="center" id="indexInner">
+			<iframe id="inner" src="main.html">
+				
+			</iframe>
 		</div>
 	</body>
 </html>
+
+<!--
+<a href="matching.html">
+				start
+			</a>
+-->
