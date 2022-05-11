@@ -3,10 +3,10 @@
 	<head>
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
+	<body id="index">
 		<script>
 			var play = false;
-			var audio = new Audio("/lib/audio/sample.wav");
+			var audio = new Audio("/lib/audio/tetris.mp3");
 			
 			function onOff() {
 				play = !play;
@@ -21,13 +21,70 @@
 			}
 		</script>
 		<div>
-         <input id="btn_bgm" type="image" onclick="onOff()" src="/lib/image/headoff.png">
+         <input style="position: absolute;"
+					 id="btn_bgm" type="image" onclick="onOff()" src="/lib/image/headoff.png" width="100px">
 				 </input>
      </div>
 		<div class="center" id="indexInner">
 			<iframe id="inner" src="main.html">
 				
 			</iframe>
+		</div>
+<style>
+	.chairs {
+		width: 100%;
+		height: 100%;
+	}
+	.chair {
+		width: 20%;
+		height: 20%;
+		position: absolute;
+  	transform: translate(-50%, -50%);
+		background-color: gray;
+		
+		z-index: -3;
+	}
+	.chair.left {
+		top: 50%;
+		left: 20%;
+	}
+	.chair.right {
+		top: 50%;
+		left: 80%;
+	}
+	.chair.top {
+		top: 20%;
+		left: 50%;
+	}
+	.chair.bottom {
+		top: 80%;
+		left: 50%;
+	}
+</style>
+		<!--
+		<svg width="100%" height="100%" style="z-index: 3">
+			
+	    <rect class="chair" x ="300" y ="300" ry="30" width="20%" height="20%"
+	    style="fill:grey; opacity:0.5"></rect>
+			
+	    <rect class="chair" x ="80%" y ="50%" ry="30" width="20%" height="20%"
+	    style="fill:grey; opacity:0.5"></rect>
+	  	
+	    <rect class="chair" x ="50%" y ="20%" ry="30" width="20%" height="20%"
+	    style="fill:grey; opacity:0.5"></rect>
+	    <rect class="chair" x ="50%" y ="80%" ry="30" width="20%" height="20%"
+	    style="fill:grey; opacity:0.5"></rect>
+	  </svg>
+		-->
+		<div id="chairs">
+			<div class="chair left">
+			</div>
+			<div class="chair right">
+			</div>
+			<div class="chair top">
+			</div>
+			<div class="chair bottom">
+			</div>
 		</div>
 	</body>
 </html>

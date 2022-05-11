@@ -1,6 +1,7 @@
 var 가로 = 4;
 var 세로 = 3;
-var 색깔들 = ["red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red"];
+var 색깔들 = 
+	["red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red"];
 var 색깔후보 = 색깔들.slice();
 var 색깔 = [];
 var 클릭플래그 = true;
