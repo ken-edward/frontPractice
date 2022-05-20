@@ -1,6 +1,6 @@
 var 가로 = 8;
 var 세로 = 6;
-var 색깔들 = ["red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red", "red"];
+var 색깔들 = [];
 var 색깔후보 = 색깔들.slice();
 var 색깔 = [];
 var 클릭플래그 = true;
@@ -47,8 +47,7 @@ function 카드세팅(가로, 세로) {
     document.querySelector('#wrapper').appendChild(card);
   }
 
-  document.querySelectorAll('.card').forEach(function (card, index) { 
-    // 초반 카드 공개
+  document.querySelectorAll('.card').forEach(function (card, index) { // 초반 카드 공개
     setTimeout(function() {
       card.classList.add('flipped');
     }, 1000 + 100 * index);

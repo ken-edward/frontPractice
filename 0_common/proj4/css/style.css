@@ -1,0 +1,70 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#outerFrame {
+	background-color: #eee;
+	width: 100%;
+	height: 100%;
+}
+
+#innerFrame {
+	background-color: #fff;
+	width: 70%;
+	height: 70%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+}
+
+.ui {
+	background-color: #ddd;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+}
+
+.ui-inner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.ui1, .ui2, .ui3 {
+	top: 0px;
+}
+
+.ui1, .ui4, .ui7 {
+	left: 0px;
+}
+
+.ui4, .ui6 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.ui2, .ui8 {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.ui5 {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.ui7, .ui8, .ui9 {
+	bottom: 0px;
+}
+
+.ui3, .ui6, .ui9 {
+	right: 0px;
+}
