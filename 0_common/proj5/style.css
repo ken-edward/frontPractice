@@ -1,0 +1,83 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+	margin: 0px;
+}
+
+#indexBody {
+	background-color: #eee;
+	background-image: url(/lib/image/desk.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#innerBody {
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#outerFrame {
+	width: 100%;
+	height: 100%;
+}
+
+#innerFrame {
+	width: 80%;
+	height: 42%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: none;
+}
+
+#main-background {
+	width: 100%;
+	height: 100%;
+	background-image: url(/lib/image/office.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#main-menu {
+	width: 50%;
+	height: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#logo {
+	width: 100%;
+	height: 40%;
+	margin-top: 10%;
+	background-image: url(/lib/image/workmate.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#btn_start {
+	margin: auto;
+	width: 30%;
+	height: 15%;
+	margin-top: 5%;
+	background-image: url(/lib/image/start.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+#btn_option {
+	margin: auto;
+	width: 30%;
+	height: 15%;
+	margin-top: 5%;
+	background-image: url(/lib/image/option.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}

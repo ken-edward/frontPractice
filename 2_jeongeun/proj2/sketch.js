@@ -61,6 +61,7 @@ function draw() {
 
 
 // sexy function
+//충돌되면 다시 리스폰으로 돌아가는 함수
 function updateDebrisAndCheckCollisions() {
   for (let i = 0; i < allDebris.length; i++) {
     allDebris[i].update();

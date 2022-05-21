@@ -3,8 +3,8 @@ var character = document.querySelector(".character");
 var map = document.querySelector(".map");
 
 //start in the middle of the map
-var x = 90;
-var y = 34;
+var x = 20;
+var y = 40;
 var held_directions = []; //State of which arrow keys we are holding down
 var speed = 1; //How fast the character moves in pixels per frame
 
@@ -39,8 +39,9 @@ const placeCharacter = () => {
    if (y > bottomLimit) { y = bottomLimit; }
    
    // 카메라 크기 설정과 동시에 고정
-   var camera_left = pixelSize * 66;
-   var camera_top = pixelSize * 42;
+	var body = document.getElementById("walkbody");
+   var camera_left = 0.5 * body.offsetWidth - 32;
+   var camera_top = 0.5 * body.offsetHeight - 32;
    
    // 맵의 위치를 바꿈 카메라는 고정
    map.style.transform = `translate3d( ${-x*pixelSize+camera_left}px, ${-y*pixelSize+camera_top}px, 0 )`;
@@ -72,6 +73,10 @@ const keys = {
    37: directions.left,
    39: directions.right,
    40: directions.down,
+	 87: directions.up,
+   65: directions.left,
+   68: directions.right,
+   83: directions.down
 }
 
 // 요부분은 잘 이해 안됨

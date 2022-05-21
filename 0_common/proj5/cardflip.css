@@ -1,0 +1,58 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+#cardBody {
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	display: inline-block;
+	margin-right: 1.25%;
+	margin-left: 1.25%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 10%;
+	height: 23%;
+	perspective: 140px;
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front {
+	background: navy;
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 1px solid black;
+	backface-visibility: hidden;
+}
+
+.card-back {
+	transform: rotateY(180deg);
+}
