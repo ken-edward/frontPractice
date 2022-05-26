@@ -12,7 +12,7 @@ function 셔플() { // 피셔예이츠 셔플
     색깔 = 색깔.concat(색깔후보.splice(Math.floor(Math.random() * 색깔후보.length), 1));
   }
 }
-
+ 
 var up = false,
     right = false,
     down = false,
