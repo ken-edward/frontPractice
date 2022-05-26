@@ -47,3 +47,12 @@ html, body {
 .card-back {
 	transform: rotateY(180deg);
 }
+
+.move {
+	position: absolute; left: 50%; top: 50%;
+	transform: translate(-50%, -50%);
+	color: orange;
+	font-size: 100px;
+}
+
+

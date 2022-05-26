@@ -99,29 +99,3 @@ html, body {
 	font-size: 148pt;
 }
 
-캐릭터 코드
-  .character {
-    width: calc( var(--grid-cell)* 2 );
-    height: calc( var(--grid-cell)* 2 );
-    position: absolute;
-    overflow:hidden;
- }
- 
- .shadow {
-    width: calc( var(--grid-cell)* 2 );
-    height: calc( var(--grid-cell)* 2 );
-    position: absolute;
-    left:0;
-    top:0;
-    background: url("https://assets.codepen.io/21542/DemoRpgCharacterShadow.png") no-repeat no-repeat;
-    background-size: 100%;
- }
- 
- .character_spritesheet {
-    position: absolute;
-    background: url("1.png") no-repeat no-repeat;
-    background-size: 100%;
-    width: calc( var(--grid-cell)* 8 );
-    height: calc( var(--grid-cell)* 8 );
- }
- 

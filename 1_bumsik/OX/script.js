@@ -150,7 +150,7 @@ function QuizLoop(quiz_num)
   }
 }
 
-/*
+
 function gameLoop(){
   var player = document.querySelector('.move')
   if (up){
@@ -175,7 +175,7 @@ function gameLoop(){
 	checkAnswer();
   window.requestAnimationFrame(gameLoop);
 }
-*/
+
 var count_bool = true;
 var quiz_length = Question.length-1;
 
