@@ -13,8 +13,21 @@ function 셔플() { // 피셔예이츠 셔플
   }
 }
 
+var up = false,
+    right = false,
+    down = false,
+    left = false,
+    x = 50.0,
+    y = 50.0;
+
+
+//-------------------카드 뒤집는 코드------------------------------
+
+var cards;
+
 function 카드세팅(가로, 세로) {
     클릭플래그 = false;
+	
   for (var i = 0; i < 가로 * 세로; i += 1) {
     var card = document.createElement('div');
     card.className = 'card';
@@ -29,7 +42,8 @@ function 카드세팅(가로, 세로) {
     cardInner.appendChild(cardBack);
     card.appendChild(cardInner);
   
-
+		
+		
 // ---------------여기서부터------------------------
     (function (c) { // 클로저 문제 해결
       card.addEventListener('click', function() {
@@ -45,11 +59,20 @@ function 카드세팅(가로, 세로) {
             }
           }
         }
+
+				
+
+
       });
+
+			
+
     })(card);
     document.querySelector('#wrapper').appendChild(card);
   }
 
+cards = document.getElementsByClassName('card');
+	
 //---------------여기까지 안쓸 코드찾기..-------------------
   document.querySelectorAll('.card').forEach(function (card, index) { // 초반 카드 공개
     setTimeout(function() {
@@ -64,6 +87,21 @@ function 카드세팅(가로, 세로) {
     클릭플래그 = true;
     시작시간 = new Date();
   }, 5000);
+
+
+	
+document.addEventListener("keydown", function(e) {
+	var _y = parseInt(y / 16.6);
+	var _i = parseInt(x / 12.5);
+			
+	_i += _y * 8;
+		
+	if (e.keyCode === 74) { 
+		// alert('' + y + ' ' + _y + ' ' + _i);
+		if (_i < 48 && _i >= 0)
+		cards[parseInt(_i)].className += ' flipped';
+	}
+				});
 }
 
 셔플();
@@ -82,12 +120,7 @@ function 카드세팅(가로, 세로) {
 
 //----------------------움직이는 코드---------------------------
 // wasd
-var up = false,
-    right = false,
-    down = false,
-    left = false,
-    x = 50.0,
-    y = 50.0;
+
 
 document.addEventListener('keydown',press);
 
@@ -114,27 +147,6 @@ function gameLoop(){
   window.requestAnimationFrame(gameLoop);
 }
 
-
-/*
-//div(card)의 좌표를 구하는 소스
-var divcard = $('card');
-
-var divX = divcard.offset().left;
-var divY = divcard.offset().top;
-*/
-
-//-------------------카드 뒤집는 코드-------------------------------
-document.addEventListener("keypress", checkKeyPressed, false);
-
-function checkKeyPressed(e) {
-	
-     //move(div)영역과 card(div)영역이 겹친다면
-	if(x == divX2 && y == divY2){
-        if (e.keyCode === 74) { //키보드 j 키를 누르면 반응            
-           c.classList.toggle('flipped'); //뒤집히는 효과
-        }
-    }
-}
 
 
 function press(e){
