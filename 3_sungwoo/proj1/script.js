@@ -115,13 +115,13 @@ function gameLoop(){
 }
 
 
-
+/*
 //div(card)의 좌표를 구하는 소스
 var divcard = $('card');
 
 var divX = divcard.offset().left;
 var divY = divcard.offset().top;
-
+*/
 
 //-------------------카드 뒤집는 코드-------------------------------
 document.addEventListener("keypress", checkKeyPressed, false);
