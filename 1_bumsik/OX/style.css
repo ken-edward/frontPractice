@@ -2,6 +2,8 @@ html, body {
 	margin: 0;
 	height: 100%;
 	overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+  
 }
 
 .center {
@@ -9,11 +11,12 @@ html, body {
 	left: 50%; top: 50%; 
   	transform: translate(-50%, -50%);
 	text-align: center;
+  
 }
 
 #score {
 	color: black;
-	font-size: 70px;
+	font-size: 30px;
 	text-shadow: 2px 2px 2px gray;
 }
 
@@ -30,12 +33,13 @@ html, body {
   	transform: translate(-50%, -88%);
 	text-align: center;
 	font-size: 30px;
+  
 }
 
 .move {
 	position: absolute; left: 50%; top: 50%;
 	transform: translate(-50%, -50%);
-	color: orange;
+	color: #EEFE84;
 	font-size: 100px;
 }
 
@@ -58,7 +62,7 @@ html, body {
 	width: 50%;
 	height: 100%;
 	display: inline-block;
-	background-color: blue;
+	background-color: #87AFFE;
 }
 
 #x {
@@ -72,7 +76,7 @@ html, body {
 	height: 100%;
 	display: inline-block;
 	text-align: center;
-	background-color: red;
+	background-color: #FE8787;
 }
 
 .mark {
@@ -95,7 +99,7 @@ html, body {
 	left: 50%; top: 50%; 
   	transform: translate(-50%, -50%);
 	text-align: center;
-	color: cornflowerblue;
+	color: #90DBA2;
 	font-size: 148pt;
 }
 
